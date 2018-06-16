@@ -1,0 +1,160 @@
+.content {
+    display: flex;
+    margin: 30px;
+}
+
+section.text {
+    margin-right: 15%;
+}
+
+a.breadcrumb {
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+    padding: 10px;
+}
+
+a.breadcrumb:hover {
+    color: #de134c;
+}
+
+ul.information-links {
+    list-style: none;
+    padding: 0px;
+}
+
+.information-links li {
+    background-color: white;
+    width: 100%;
+    margin: 5px 0px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.information-links a{
+    display: inline-block;
+	position: relative;
+}
+
+.information-links a:hover:before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: 2px solid #de134c;
+}
+
+.information-links li:active{
+	border: #DE134C solid 2px;
+}
+
+aside.buttons {
+    padding-right: 50px;
+}
+
+section.text {
+    margin-right: 7%;
+    margin-top: 47px;
+}
+
+.information-links li a {
+	color: black;
+	text-decoration: none;
+}
+
+.information-links li a:hover {
+	color: #DB0045;
+    text-decoration: none;
+}
+
+.posters {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    min-height: 500px;
+}
+
+.poster img {
+    flex: 1;
+    max-width:  100%;
+}
+
+.poster {
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    background-size: cover;
+    text-decoration: none;
+    border: white solid 3px;
+}
+
+.poster.BK-poster {
+    background-image: url(../images/BK-poster.jpg);
+}
+
+.poster.BK-poster:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/BK-poster.jpg);
+}
+
+.poster.damaris {
+    background-image: url(../images/damaris.jpg);
+}
+
+.poster.damaris:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/damaris.jpg);
+}
+
+.poster.twee {
+    background-image: url(../images/twee.jpg);
+}
+
+.poster.twee:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/twee.jpg);
+}
+.poster p{
+    background-color:white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.poster p:hover{
+    color: #DB0045;
+    border-style: solid;
+    border-color: #DB0045;
+    border-width: 2px; 
+}
+
+.poster h3 {
+    visibility: hidden;
+    flex: 1;
+    align-self: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.60);
+    color: #DB0045;
+}
+
+.poster:hover{
+    border: #DB0045 solid 3px;
+}
+
+.poster:hover h3 {
+    visibility: visible;
+}
+
+.interesses-opmerkingen {
+    display: none;
+}
+
+.contactgegevens {
+    display: none;
+}
+
+.ondersteunend-commissiewerk {
+    display: none;
+}

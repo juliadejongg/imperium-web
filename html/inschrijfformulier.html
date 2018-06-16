@@ -1,0 +1,248 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Imperium Theater - Home</title>
+	<meta name="description" content="Imperium Theater - School">
+	<meta name="author" content="Julia de Jong">
+
+	<!-- Scripts en CSS inladen die ik nodig heb -->
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/leden-informatie.css">
+	<link rel="stylesheet" href="../css/inschrijfformulier.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+	 crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../scripts/scripts.js"></script>
+</head>
+
+<body>
+	<div class="logo">
+		<img src="../images/logo.svg" />
+	</div>
+	<div class="page">
+		<header>
+			<ul class="menu">
+				<li>
+					<a class="active" href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#agenda">Agenda</a>
+				</li>
+				<li>
+					<a href="#archief">Archief</a>
+				</li>
+				<li>
+					<a href="#huren">Huren</a>
+				</li>
+				<li>
+					<a href="#overons">Over ons</a>
+				</li>
+				<li>
+					<a href="#fotoboek">Fotoboek</a>
+				</li>
+				<li>
+					<a href="#reserveren">Reserveren</a>
+				</li>
+				<li>
+					<a href="wordlid.html">Word lid</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+				<a href="wordlid.html" class="breadcrumb">Word lid</a>><a href="inschrijfformulier.html" class="breadcrumb">Inschrijfformulier</a>
+			<h1>Inschrijfformulier</h1>
+			<div class="content">
+				<section class="text">
+					<p>Vul het onderstaande aanmeldformulier in en druk op verstuur. Na toezending ontvang je een reactie van ons en zullen
+						we je uitnodigen voor de eerstkomende auditie-avond. De audities zijn meestal in september, november, januari en juni.
+					</p>
+					<!-- Het inschrijfformulier staat in verschillende stappen zodat het geen lang formulier is die gebruikers in moeten vullen -->
+					<ul class="tab clearfix" id="stappen">
+						<li class="stap active">
+							<a href="#persoonsgegevens">Persoonsgegevens</a>
+						</li>
+						<li class="stap">
+							<a href="#contactgegevens">Contactgegevens</a>
+						</li>
+						<li class="stap">
+							<a href="#ondersteunend-commissiewerk">Ondersteunend Commissiewerk</a>
+						</li>
+						<li class="stap">
+							<a href="#interesses-opmerkingen">Interesses &amp; opmerkingen</a>
+						</li>
+					</ul>
+					<div class="form signup">
+						<form id="persoonsgegevens" name="persoonsgegevens" onsubmit="return false;">
+							<div class="wrapper">
+								<div class="input">
+									<label for="firstname">Voornaam:</label>
+									<input type="text" placeholder="Voornaam" name="firstname" required/>
+									<br>
+									<label for="lastname">Achternaam:</label>
+									<input type="text" placeholder="Achternaam" name="lastname" required/>
+									<br>
+									<label for="dateofbirth">Geboortedatum:</label>
+									<input type="date" placeholder="xx-xx-xxxx" name="dateofbirth" required/>
+									<br>
+									<label for="address">Adres:</label>
+									<input type="text" placeholder="Adres" name="address" required/>
+									<br>
+									<label for="postalcode">Postcode:</label>
+									<!-- Postcode mag geen andere vorm hebben dan 1234AB --> 
+									<input type="text" pattern="[0-9]{4}[A-Za-z]{2}" title="Geldige postcode (1234AB) invullen" placeholder="1234AB" name="postalcode"
+									 maxlength="6" required/>
+									<br>
+									<label for="residence">Woonplaats:</label>
+									<input type="text" placeholder="Woonplaats" name="residence" required/>
+								</div>
+								<div class="button">
+									<input type="submit" value="Volgende">
+								</div>
+							</div>
+						</form>
+						<form id="contactgegevens">
+							<div class="wrapper">
+								<div class="input">
+									<label for="phonenumber">Telefoonnummer:</label>
+									<!-- Telefoonnummer is niet verplicht omdat niet iedereen een huistelefoon meer heeft -->
+									<input type="tel" placeholder="123 4567890" name="phonenumber" maxlength="10" />
+									<br>
+									<label for="mobilephone">Mobiele nummer:</label>
+									<input type="tel" placeholder="06 12345678" name="mobilephone" maxlength="10" required/>
+									<br>
+									<label for="e-mail">E-mailadres:</label>
+									<input type="email" placeholder="pieter@post.nl" name="e-mail" required/>
+									<br />
+								</div>
+								<div class="button">
+									<button type="button" id="back-persoonsgegevens">Terug</button>
+									<input type="submit" value="Volgende">
+								</div>
+							</div>
+						</form>
+						<form id="ondersteunend-commissiewerk">
+							<div class="wrapper">
+								<div class="input">
+									<!-- Je wordt niet gedwongen om iets aan te vinken omdat je ook lid kan zijn zonder aanvullende activiteiten-->
+									<p>Aanvinken wat van toepassing is</p>
+									<input type="checkbox" name="werk[decor]" value="decor" />Decor bouwen
+									<br>
+									<input type="checkbox" name="werk[kleding]" value="kleding" />Kleding maken/uitzoeken
+									<br>
+									<input type="checkbox" name="werk[teksten]" value="teksten" />Teksten schrijven voor IMPPRESSIE en website
+									<br>
+									<input type="checkbox" name="werk[techniek]" value="techniek" />Techniek (licht/geluid)
+									<br>
+									<input type="checkbox" name="werk[pr]" value="activiteiten" />Algemene PR activiteiten
+									<br>
+									<input type="checkbox" name="werk[fotos]" value="fotos" />Foto's maken (voor PR)
+									<br>
+									<input type="checkbox" name="werk[website]" value="website" />Website onderhouden
+									<br>
+									<input type="checkbox" name="" value="anders" />Anders, namelijk
+									<br>
+									<textarea name="werk[anders]"></textarea>
+									<br/>
+								</div>
+								<div class="button">
+									<button type="button" id="back-contactgegevens">Terug</button>
+									<input type="submit" value="Volgende">
+								</div>
+							</div>
+						</form>
+						<form id="interesses-opmerkingen">
+							<div class="wrapper">
+								<div class="input">
+									<p>Aanvinken wat van toepassing is</p> 
+									<!-- Hier wel een van de twee aanklikken, vandaar de radio buttons --> 
+									<input type="radio" name="lid" value="toneelspelend" />Ik word toneelspelend lid met aanvullende activiteiten
+									<br>
+									<input type="radio" name="lid" value="commissie" />Ik word alleen lid van een commissie
+									<br>
+									<textarea placeholder="Overige opmerkingen"></textarea>
+									<br>
+									<input type="checkbox" name="nieuwsbrief" value="nieuwsbrief" checked/>Ja, ik wil graag de nieuwsbrief ontvangen
+									<br>
+								</div>
+								<div class="button">
+									<button type="button" id="back-ondersteunend-commissiewerk">Terug</button>
+									<input type="submit" value="Versturen">
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+				<aside class="buttons">
+					<p>Meer informatie</p>
+					<ul class="information-links">
+						<li>
+							<a href="audities.html">Audities</a>
+						</li>
+						<li>
+							<a href="repetitieproces.html">Repetitieproces</a>
+						</li>
+						<li>
+							<a href="inzet.html">Inzet</a>
+						</li>
+						<li>
+							<a href="contributie.html">Contributie</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+						<li>
+							<a href="inschrijfformulier.html">Inschrijfformulier</a>
+						</li>
+					</ul>
+				</aside>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-column">
+				<p>
+					Theater Imperium</br>
+					Oude Vest 33E</br>
+					2312XR Leiden</br>
+					071 514 1035</br>
+				</p>
+			</div>
+			<div class="footer-column">
+				<ul class="footer-links">
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						<a href="#route">Route</a>
+					</li>
+					<li>
+						<a href="#nieuwsbrief">Nieuwsbrief</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-column social">
+				<p>Volg ons op:</p>
+				<div class="social-icons">
+					<a href="#facebook">
+						<i class="fab fa-facebook-square"></i>
+					</a>
+					<!-- Facebook icoontje -->
+					<a href="#twitter">
+						<i class="fab fa-twitter-square"></i>
+					</a>
+					<!-- Twitter icoontje -->
+				</div>
+			</div>
+			<div class="footer-column logo">
+				<a href="../index.html">
+					<img src="../images/logo.svg" />
+				</a>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
